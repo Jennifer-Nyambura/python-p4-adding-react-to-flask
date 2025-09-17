@@ -24,13 +24,12 @@ function NewMessage({ currentUser, onAddMessage }) {
   }
 
   return (
-    <form className="new-message" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
-        name="body"
-        autoComplete="off"
         value={body}
         onChange={(e) => setBody(e.target.value)}
+        placeholder="Type a message"
       />
       <button type="submit">Send</button>
     </form>
